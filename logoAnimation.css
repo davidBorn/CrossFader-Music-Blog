@@ -147,6 +147,12 @@ header .highlight, header .current a {
     font-weight: bold;
 }
 
+/**highlighting in the case where we are using the mobile sidebar**/
+.sidebar .mobile-menu .current-mobile a {
+    color: rgb(233, 233, 98);
+    font-weight: bold;
+}
+
 header #font {
     font-family: ostrich;
     letter-spacing: 5px;
@@ -205,13 +211,14 @@ header a:hover:after, a:focus:after {
     
     
     overflow: hidden;
-    background:linear-gradient(rgb(0,0,0,0),rgb(0,0,0,.5)),url('phoneImg2.jpg');
-    
+    background:linear-gradient(rgb(0,0,0,0),rgb(0,0,0,1)),url('phoneImg2.jpg');
+  
     background-repeat: no-repeat;
     animation: Gradient2 5s;
     animation-fill-mode: forwards;
 
     width: 100%;
+    position: static;
    
 }
 
@@ -226,7 +233,11 @@ header a:hover:after, a:focus:after {
     display: none;
 }
 
-@media (max-width: 768px){
+.animation{
+    display: block;
+}
+
+@media (max-width: 800px){
 
     .menu {
         display: none;
@@ -338,7 +349,7 @@ header a:hover:after, a:focus:after {
 
 
 /*responsive background past 450px*/
-@media only screen and (min-width: 450px){
+@media only screen and (min-width: 768px){
     #showcase,html, body {
         margin: 0;
         padding: 0;
@@ -347,7 +358,7 @@ header a:hover:after, a:focus:after {
         overflow: hidden;
         background:linear-gradient(rgb(0,0,0,0),rgb(0,0,0,.5)),url('pexels-photo-792833.jpeg');
         
-        animation: Gradient 5s;
+        animation: Gradient 3s;
         animation-fill-mode: forwards;
 
 
@@ -360,9 +371,10 @@ header a:hover:after, a:focus:after {
 }
 
 #showcase canvas {
-    position:absolute;
+    position: absolute;
+
     
-    width: 60%;
+    width: 45%;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -372,7 +384,7 @@ header a:hover:after, a:focus:after {
 
 
 
-@media only screen and (min-width: 450px){
+@media only screen and (min-width: 769px){
     #showcase canvas {
         position:absolute;
         
@@ -386,7 +398,7 @@ header a:hover:after, a:focus:after {
     }
 }
 
-#text1{
+#text7{
     text-align: center;
     color: white;
     font-family: ostrich;
@@ -398,20 +410,39 @@ header a:hover:after, a:focus:after {
     left: 50%;
     transform: translate(-50%,  -50%);
     font-size: 20px;
-    width: 100%;
+    width: 70%;
     animation-name: example;
     animation-duration: 2s;
     letter-spacing: 5px;
     
 }
 
+#text6 {
+    color: rgb(233, 233, 98);
+    font-family: ostrichLight;
+    text-align: center;
+    position: absolute;
+  
 
+    width: 50%;
+    padding: 0 0;
+    margin: 0 0;
+    top: 90%;
+    left: 75%;
 
-#text2, #text3, #text4, #text5 {
+    transform: translate(-50%,  -50%);
+    font-size: 30px;
+    
+    animation-name: example4;
+
+    animation-duration: 3s;
+}
+
+#text1, #text2, #text3, #text4, #text5 {
     display: none;
 }
 
-@media only screen and (min-width: 450px){
+@media only screen and (min-width: 769px){
     #text1 {
         text-align: center;
         color: white;
@@ -431,7 +462,7 @@ header a:hover:after, a:focus:after {
     }
 }
 
-@media only screen and (min-width: 450px){
+@media only screen and (min-width: 769px){
     #text2 {
         color: white;
         font-family: ostrich;
@@ -454,7 +485,7 @@ header a:hover:after, a:focus:after {
     }
 }
 
-@media only screen and (min-width: 450px){
+@media only screen and (min-width: 769px){
     #text3 {
         color: white;
         font-family: ostrich;
@@ -476,7 +507,7 @@ header a:hover:after, a:focus:after {
     }
 }
 
-@media only screen and (min-width: 450px){
+@media only screen and (min-width: 769px){
     #text4 {
         color: white;
         font-family: ostrich;
@@ -498,7 +529,7 @@ header a:hover:after, a:focus:after {
     }
 }
 
-@media only screen and (min-width: 450px){
+@media only screen and (min-width: 769px){
     #text5 {
         color: white;
         font-family: ostrich;
@@ -506,7 +537,7 @@ header a:hover:after, a:focus:after {
         position: absolute;
         display: block;
 
-        display: block;
+        
         padding: 0;
         margin: 0;
         top: 80%;
@@ -522,30 +553,16 @@ header a:hover:after, a:focus:after {
     }
 }
 
-@media only screen and (min-width: 450px){
+@media only screen and (min-width: 769px){
     #text2 {
         display: none;
     }
 }
 
-#text6 {
-    color: rgb(233, 233, 98);
-    font-family: ostrichLight;
-    text-align: center;
-    position: absolute;
-  
-
-   
-    padding: 0;
-    margin: 0;
-    top: 80%;
-    left: 75%;
-
-    transform: translate(-50%,  -50%);
-    font-size: 30px;
-    width: 100%;
-    animation-name: example4;
-
-    animation-duration: 2s;
+@media only screen and (min-width: 769px){
+    #text7 {
+        display: none;
+    }
 }
+
 
